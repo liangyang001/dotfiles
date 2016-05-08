@@ -1,16 +1,28 @@
  
+set nocompatible
+filetype off
 
-set encoding=utf-8
-syntax enable
-syntax on
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-colorscheme desert
+Plugin 'VundleVim/Vundle.vim' "let Vundle manage itself
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'godlygeek/tabular'
+Plugin 'kien/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
 
-
+call vundle#end()
 filetype plugin indent on
 
+syntax enable
+syntax on
+colorscheme desert
+
+set encoding=utf-8
 set autoread
-set mouse=a
 set number
 set hlsearch
 set scrolloff=5
@@ -22,27 +34,32 @@ set clipboard=unnamed
 set shiftwidth=4
 set softtabstop=4
 set autoindent
+set expandtab
 set smartindent
 set guifont=Droid\ Sans\ Mono\ 11
 set suffixesadd+=.rb
-set laststatus=2
+
+let mapleader=','
 
 "keyboard mapping
-nnoremap <C-s>  <esc>:w<cr>
-vnoremap <C-s>  <esc>:w<cr>
-inoremap <C-s>  <esc>:w<cr>
-cnoremap <C-s>	<esc>:w<cr>
-nnoremap <silent> <C-l> :<C-u>nohlsearch<cr><C-l>
+nmap        /               <Plug>(easymotion-sn)
+nnoremap    <silent> <C-l>  :<C-u>nohlsearch<cr><C-l>
+map         <F3>            :NERDTreeToggle<cr>
+nmap        <F6>            :cp<cr>
+nmap        <F7>            :cn<cr>
+noremap     <Up>            <Nop>
+noremap     <Down>          <Nop>
+noremap     <Left>          <Nop>
+noremap     <Right>         <Nop>
 
-nmap <F6> :cp<cr>
-nmap <F7> :cn<cr>
-
-noremap <Up>	<Nop>
-noremap <Down>	<Nop>
-noremap <Left>	<Nop>
-noremap <Right> <Nop>
-
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a: :Tabularize /:\zs<CR>
+vmap <Leader>a: :Tabularize /:\zs<CR>
 
 
 "autocommand
 "autocmd BufWritePost * call system("ctags -R")
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
