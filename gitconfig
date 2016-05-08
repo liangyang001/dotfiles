@@ -1,0 +1,8 @@
+[user]
+	name = Kurt
+	email = lyzoridc@gmail.com
+[color]
+	ui = true
+[alias]
+	st = status
+	ci = commit
