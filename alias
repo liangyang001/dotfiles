@@ -1,0 +1,7 @@
+alias rz='rz -e'
+alias mkdir='mkdir -pv'
+alias cp='cp -v'
+alias mv='mv -v'
+alias df='df -h'
+alias du='du -h'
+alias grep='grep -rnE --color'

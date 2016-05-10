@@ -29,6 +29,7 @@ set backspace=indent,eol,start
 set encoding=utf-8
 set expandtab
 set hlsearch
+set ignorecase
 set number
 set scrolloff=5
 set shiftwidth=4
@@ -55,11 +56,8 @@ nmap        <F8>            :A<cr>
 "noremap     <Left>          <Nop>
 "noremap     <Right>         <Nop>
 
-nmap <Leader>a= :Tabularize /=<CR>
-vmap <Leader>a= :Tabularize /=<CR>
-nmap <Leader>a: :Tabularize /:\zs<CR>
-vmap <Leader>a: :Tabularize /:\zs<CR>
-
+nmap <Leader>a :Tabularize /
+vmap <Leader>a :Tabularize /
 
 
 "autocommand
