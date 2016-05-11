@@ -36,7 +36,7 @@ set shiftwidth=4
 set sidescrolloff=5
 set smartindent
 set softtabstop=4
-set suffixesadd+=.rb
+"set suffixesadd+=.rb
 
 let mapleader=','
 
