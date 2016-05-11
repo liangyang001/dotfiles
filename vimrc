@@ -15,6 +15,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-scripts/a.vim'
+Plugin 'raimondi/delimitmate'
+"Plugin 'klen/python-mode'
 
 call vundle#end()
 filetype plugin indent on
