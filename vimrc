@@ -38,7 +38,7 @@ set scrolloff=5
 set shiftwidth=4
 set sidescrolloff=5
 set smartindent
-set softtabstop=4
+set tabstop=4
 "set suffixesadd+=.rb
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set termencoding=utf-8
