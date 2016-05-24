@@ -56,6 +56,7 @@ map         <F2>            :NERDTreeToggle<cr>
 nnoremap    <F3>            :cn<Cr>
 nnoremap    <F4>            :cp<cr>
 nnoremap    <F5>            :call AddTafCodePath()<cr>
+nnoremap    <F7>            :TlistToggle<cr>
 nmap        <F8>            :A<cr>
 "noremap     <Up>            <Nop>
 "noremap     <Down>          <Nop>
