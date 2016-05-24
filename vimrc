@@ -44,6 +44,8 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set termencoding=utf-8
 
 let mapleader=','
+let g:alternateExtensions_CPP = "h,H,inc,HPP,hpp"
+let g:alternateExtensions_h = "cpp,c,cxx,cc,CC"
 
 function AddTafCodePath()
     set path+=/home/tafjce/**
@@ -63,8 +65,9 @@ nmap        <F8>            :A<cr>
 "noremap     <Left>          <Nop>
 "noremap     <Right>         <Nop>
 
-nmap <Leader>a :Tabularize /
-vmap <Leader>a :Tabularize /
+nmap <Leader>jt          :TlistOpen<cr>
+nmap <Leader>a           :Tabularize /
+vmap <Leader>a           :Tabularize /
 
 
 "autocommand
