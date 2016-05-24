@@ -50,8 +50,9 @@ endfunction
 nmap        /               <Plug>(easymotion-sn)
 nnoremap    <silent> <C-l>  :<C-u>nohls<cr><C-l>
 map         <F2>            :NERDTreeToggle<cr>
-nmap        <F3>            :cp<cr>
-nmap        <F4>            :cn<cr>
+nnoremap    <F3>            :cn<Cr>
+nnoremap    <F4>            :cp<cr>
+nnoremap    <F5>            :call AddTafCodePath()<cr>
 nmap        <F8>            :A<cr>
 "noremap     <Up>            <Nop>
 "noremap     <Down>          <Nop>
