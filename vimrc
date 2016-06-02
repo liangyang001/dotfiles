@@ -17,6 +17,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-scripts/a.vim'
 Plugin 'raimondi/delimitmate'
 Plugin 'taglist.vim'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 "Plugin 'klen/python-mode'
 
 call vundle#end()
@@ -47,10 +48,13 @@ let mapleader=','
 let g:alternateExtensions_CPP = "h,H,inc,HPP,hpp"
 let g:alternateExtensions_h = "cpp,c,cxx,cc,CC"
 let NERDTreeIgnore = ['\.pyc$', '\.o', '\.O']
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#left_sep=' '
+let g:airline#extensions#tabline#left_alt_sep='|'
 
-function AddTafCodePath()
-    set path+=/home/tafjce/**
-endfunction
+"function AddTafCodePath()
+""    set path+=/home/tafjce/**
+"endfunction
 
 "keyboard mapping
 nmap        /               <Plug>(easymotion-sn)
