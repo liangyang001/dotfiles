@@ -16,8 +16,9 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-scripts/a.vim'
 Plugin 'raimondi/delimitmate'
-Plugin 'taglist.vim'
+"Plugin 'taglist.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'kien/rainbow_parentheses.vim'
 "Plugin 'klen/python-mode'
 
 call vundle#end()
@@ -51,6 +52,7 @@ let NERDTreeIgnore = ['\.pyc$', '\.o', '\.O']
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#left_sep=' '
 let g:airline#extensions#tabline#left_alt_sep='|'
+let g:cpp_class_scope_highlight = 1
 
 "function AddTafCodePath()
 ""    set path+=/home/tafjce/**
