@@ -1,4 +1,4 @@
- 
+
 set nocompatible
 filetype off
 
@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim' "let Vundle manage itself
+Plugin 'tomasr/molokai'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
@@ -13,12 +14,15 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'godlygeek/tabular'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-scripts/a.vim'
 Plugin 'raimondi/delimitmate'
-"Plugin 'taglist.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'itchyny/landscape.vim'
+"Plugin 'taglist.vim'
 "Plugin 'klen/python-mode'
 
 call vundle#end()
@@ -35,6 +39,8 @@ set encoding=utf-8
 set expandtab
 set hlsearch
 set ignorecase
+set t_Co=256  "display color
+set laststatus=2
 set number
 set scrolloff=5
 set shiftwidth=4
@@ -49,10 +55,39 @@ let mapleader=','
 let g:alternateExtensions_CPP = "h,H,inc,HPP,hpp"
 let g:alternateExtensions_h = "cpp,c,cxx,cc,CC"
 let NERDTreeIgnore = ['\.pyc$', '\.o', '\.O']
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#left_sep=' '
-let g:airline#extensions#tabline#left_alt_sep='|'
 let g:cpp_class_scope_highlight = 1
+let g:rbpt_max = 16
+let g:rbpt_colorpairs = [
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ]
+let g:molokai_original = 1
+let g:rehash256 = 1
+"let g:airline#extensions#tabline#enabled=1
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_left_sep = '▶'
+let g:airline_left_alt_sep = '❯'
+let g:airline_right_sep = '◀'
+let g:airline_right_alt_sep = '❮'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_theme="badwolf"
 
 "function AddTafCodePath()
 ""    set path+=/home/tafjce/**
@@ -67,6 +102,8 @@ nnoremap    <F4>            :cn<cr>
 nnoremap    <F5>            :call AddTafCodePath()<cr>
 nnoremap    <F7>            :TlistToggle<cr>
 nmap        <F8>            :A<cr>
+nnoremap    [b              :bp<CR>
+nnoremap    ]b              :bn<CR>
 "noremap     <Up>            <Nop>
 "noremap     <Down>          <Nop>
 "noremap     <Left>          <Nop>
@@ -79,6 +116,13 @@ vmap <Leader>a           :Tabularize /
 
 "autocommand
 "autocmd BufWritePost * call system("ctags -R")
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+au StdinReadPre * let s:std_in=1
+au VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+au bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+"command
+":FixWhitespace
