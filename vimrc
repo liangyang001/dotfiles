@@ -57,24 +57,20 @@ let g:alternateExtensions_h = "cpp,c,cxx,cc,CC"
 let NERDTreeIgnore = ['\.pyc$', '\.o', '\.O']
 let g:cpp_class_scope_highlight = 1
 let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
 let g:rbpt_colorpairs = [
-    \ ['darkred',     'DarkOrchid3'],
-    \ ['red',         'firebrick3'],
     \ ['brown',       'RoyalBlue3'],
     \ ['Darkblue',    'SeaGreen3'],
     \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkgreen',   'firebrick3'],
     \ ['darkcyan',    'RoyalBlue3'],
-    \ ['darkred',     'SeaGreen3'],
     \ ['darkmagenta', 'DarkOrchid3'],
     \ ['brown',       'firebrick3'],
     \ ['gray',        'RoyalBlue3'],
-    \ ['black',       'SeaGreen3'],
     \ ['darkmagenta', 'DarkOrchid3'],
     \ ['Darkblue',    'firebrick3'],
-    \ ['darkgreen',   'RoyalBlue3'],
     \ ['darkcyan',    'SeaGreen3'],
     \ ]
+
 let g:molokai_original = 1
 let g:rehash256 = 1
 "let g:airline#extensions#tabline#enabled=1
@@ -122,7 +118,7 @@ au bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTre
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+"au Syntax * RainbowParenthesesLoadBraces
 
 "command
 ":FixWhitespace
