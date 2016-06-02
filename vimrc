@@ -46,6 +46,7 @@ set termencoding=utf-8
 let mapleader=','
 let g:alternateExtensions_CPP = "h,H,inc,HPP,hpp"
 let g:alternateExtensions_h = "cpp,c,cxx,cc,CC"
+let NERDTreeIgnore = ['\.pyc$', '\.o', '\.O']
 
 function AddTafCodePath()
     set path+=/home/tafjce/**
@@ -55,8 +56,8 @@ endfunction
 nmap        /               <Plug>(easymotion-sn)
 nnoremap    <silent> <C-l>  :<C-u>nohls<cr><C-l>
 map         <F2>            :NERDTreeToggle<cr>
-nnoremap    <F3>            :cn<Cr>
-nnoremap    <F4>            :cp<cr>
+nnoremap    <F3>            :cp<Cr>
+nnoremap    <F4>            :cn<cr>
 nnoremap    <F5>            :call AddTafCodePath()<cr>
 nnoremap    <F7>            :TlistToggle<cr>
 nmap        <F8>            :A<cr>
