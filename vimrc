@@ -30,7 +30,6 @@ filetype plugin indent on
 
 syntax enable
 syntax on
-colorscheme desert
 
 set autoindent
 set autoread
@@ -50,6 +49,10 @@ set tabstop=4
 "set suffixesadd+=.rb
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set termencoding=utf-8
+
+colorscheme desert
+"put all thses after 'set t_Co=256'
+highlight Search ctermfg=Black ctermbg=LightRed cterm=NONE
 
 let mapleader=','
 let g:alternateExtensions_CPP = "h,H,inc,HPP,hpp"
@@ -71,6 +74,7 @@ let g:rbpt_colorpairs = [
     \ ['darkcyan',    'SeaGreen3'],
     \ ]
 
+
 let g:molokai_original = 1
 let g:rehash256 = 1
 "let g:airline#extensions#tabline#enabled=1
@@ -85,13 +89,14 @@ let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.branch = '⎇'
 let g:airline_theme="badwolf"
 
+
 "function AddTafCodePath()
 ""    set path+=/home/tafjce/**
 "endfunction
 
 "keyboard mapping
 nmap        /               <Plug>(easymotion-sn)
-nnoremap    <silent> <C-l>  :<C-u>nohls<cr><C-l>
+nnoremap    <silent> <Leader>l  :<C-u>nohls<cr><C-l>
 map         <F2>            :NERDTreeToggle<cr>
 nnoremap    <F3>            :cp<Cr>
 nnoremap    <F4>            :cn<cr>
@@ -100,11 +105,14 @@ nnoremap    <F7>            :TlistToggle<cr>
 nmap        <F8>            :A<cr>
 nnoremap    [b              :bp<CR>
 nnoremap    ]b              :bn<CR>
-"noremap     <Up>            <Nop>
-"noremap     <Down>          <Nop>
-"noremap     <Left>          <Nop>
-"noremap     <Right>         <Nop>
-
+noremap     <Up>            k
+noremap     <Down>          j
+noremap     <Left>          h
+noremap     <Right>         l
+nnoremap    <C-J>           <C-W><C-J>
+nnoremap    <C-K>           <C-W><C-K>
+nnoremap    <C-L>           <C-W><C-L>
+nnoremap    <C-H>           <C-W><C-H>
 nmap <Leader>jt          :TlistOpen<cr>
 nmap <Leader>a           :Tabularize /
 vmap <Leader>a           :Tabularize /
@@ -119,6 +127,7 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 "au Syntax * RainbowParenthesesLoadBraces
+
 
 "command
 ":FixWhitespace
