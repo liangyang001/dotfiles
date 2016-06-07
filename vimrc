@@ -22,10 +22,12 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'itchyny/landscape.vim'
+Plugin 'majutsushi/tagbar'
 "Plugin 'taglist.vim'
 "Plugin 'klen/python-mode'
 
 call vundle#end()
+filetype plugin on
 filetype plugin indent on
 
 syntax enable
@@ -100,8 +102,7 @@ nnoremap    <silent> <Leader>l  :<C-u>nohls<cr><C-l>
 map         <F2>            :NERDTreeToggle<cr>
 nnoremap    <F3>            :cp<Cr>
 nnoremap    <F4>            :cn<cr>
-nnoremap    <F5>            :call AddTafCodePath()<cr>
-nnoremap    <F7>            :TlistToggle<cr>
+nmap        <F7>            :TagbarToggle<cr>
 nmap        <F8>            :A<cr>
 nnoremap    [b              :bp<CR>
 nnoremap    ]b              :bn<CR>
@@ -109,11 +110,11 @@ noremap     <Up>            k
 noremap     <Down>          j
 noremap     <Left>          h
 noremap     <Right>         l
+nmap        <C-s>           :w<cr>
 nnoremap    <C-J>           <C-W><C-J>
 nnoremap    <C-K>           <C-W><C-K>
 nnoremap    <C-L>           <C-W><C-L>
 nnoremap    <C-H>           <C-W><C-H>
-nmap <Leader>jt          :TlistOpen<cr>
 nmap <Leader>a           :Tabularize /
 vmap <Leader>a           :Tabularize /
 
