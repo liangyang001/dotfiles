@@ -94,6 +94,7 @@ let g:airline_theme="badwolf"
 ""    set path+=/home/tafjce/**
 "endfunction
 
+
 "keyboard mapping
 nmap        /               <Plug>(easymotion-sn)
 nnoremap    <silent> <Leader>l  :<C-u>nohls<cr><C-l>
@@ -130,3 +131,4 @@ au Syntax * RainbowParenthesesLoadSquare
 
 "command
 ":FixWhitespace
+"use [# or #] navigate up/down for #if/#endif  #ifdef/#endif etc
