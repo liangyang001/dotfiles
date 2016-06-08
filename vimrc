@@ -23,8 +23,6 @@ Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'itchyny/landscape.vim'
 Plugin 'majutsushi/tagbar'
-"Plugin 'taglist.vim'
-"Plugin 'klen/python-mode'
 
 call vundle#end()
 filetype plugin on
@@ -102,8 +100,8 @@ nnoremap    <silent> <Leader>l  :<C-u>nohls<cr><C-l>
 map         <F2>            :NERDTreeToggle<cr>
 nnoremap    <F3>            :cp<Cr>
 nnoremap    <F4>            :cn<cr>
-nmap        <F7>            :TagbarToggle<cr>
 nmap        <F8>            :A<cr>
+nmap        <F9>            :TagbarToggle<cr>
 nnoremap    [b              :bp<CR>
 nnoremap    ]b              :bn<CR>
 noremap     <Up>            k
