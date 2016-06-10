@@ -54,8 +54,8 @@ set termencoding=utf-8
 colorscheme desert
 "put all thses after 'set t_Co=256'
 "override underline
-hi cursorline cterm=bold
-hi cursorline ctermbg=DarkGrey
+"hi cursorline cterm=bold
+hi cursorline cterm=NONE ctermbg=DarkGrey
 hi Search ctermfg=Black ctermbg=LightRed cterm=NONE
 
 let mapleader=','
@@ -131,6 +131,8 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 "au Syntax * RainbowParenthesesLoadBraces
+autocmd InsertEnter * highlight  CursorLine ctermbg=NONE
+autocmd InsertLeave * highlight  CursorLine ctermbg=DarkGrey
 
 
 "command
