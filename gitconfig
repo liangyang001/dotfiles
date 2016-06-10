@@ -6,3 +6,5 @@
 [alias]
 	st = status
 	ci = commit
+[push]
+	default = simple
