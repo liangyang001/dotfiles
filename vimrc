@@ -41,6 +41,7 @@ set ignorecase
 set t_Co=256  "display color
 set laststatus=2
 set number
+set cursorline
 set scrolloff=5
 set shiftwidth=4
 set sidescrolloff=5
@@ -52,7 +53,10 @@ set termencoding=utf-8
 
 colorscheme desert
 "put all thses after 'set t_Co=256'
-highlight Search ctermfg=Black ctermbg=LightRed cterm=NONE
+"override underline
+hi cursorline cterm=bold
+hi cursorline ctermbg=DarkGrey
+hi Search ctermfg=Black ctermbg=LightRed cterm=NONE
 
 let mapleader=','
 let g:alternateExtensions_CPP = "h,H,inc,HPP,hpp"
