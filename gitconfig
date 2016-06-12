@@ -7,4 +7,4 @@
 	st = status
 	ci = commit
 [push]
-	default = simple
+	default = matching
