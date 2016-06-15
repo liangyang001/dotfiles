@@ -4,7 +4,6 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 Plugin 'VundleVim/Vundle.vim' "let Vundle manage itself
 Plugin 'tomasr/molokai'
 Plugin 'scrooloose/nerdtree'
@@ -23,8 +22,8 @@ Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'itchyny/landscape.vim'
 Plugin 'majutsushi/tagbar'
-
 call vundle#end()
+
 filetype plugin on
 filetype plugin indent on
 
