@@ -105,6 +105,7 @@ nnoremap    <silent> <Leader>l  :<C-u>nohls<cr><C-l>
 map         <F2>            :NERDTreeToggle<cr>
 nnoremap    <F3>            :cp<Cr>
 nnoremap    <F4>            :cn<cr>
+nmap        <F7>            :copen<cr>
 nmap        <F8>            :A<cr>
 nmap        <F9>            :TagbarToggle<cr>
 nnoremap    [b              :bp<CR>
