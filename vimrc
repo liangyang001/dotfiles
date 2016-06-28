@@ -101,10 +101,12 @@ let g:airline_theme="badwolf"
 "keyboard mapping
 nmap        /               <Plug>(easymotion-sn)
 nnoremap    <Leader>l       :silent <C-u>nohls<cr><C-l>
+nnoremap    <Leader>*       :silent execute  "vimgrep /\\<".expand("<cword>")."\\>/gj ".expand("%")<cr>
+nnoremap    <Leader><Leader>* :silent execute  "vimgrep /\\<".expand("<cword>")."\\>/gj *.cpp *.c *.h"<cr>
 map         <F2>            :NERDTreeToggle<cr>
 nnoremap    <F3>            :cp<Cr>
 nnoremap    <F4>            :cn<cr>
-nnoremap    <F5>            :silent execute  "vimgrep /".expand("<cWORD>")."/gj *.cpp *.c *.h"<cr>
+"nnoremap    <F5>            :silent execute  "vimgrep /\\<".expand("<cword>")."\\>/gj *.cpp *.c *.h"<cr>
 nmap        <F7>            :copen<cr>
 nmap        <F8>            :A<cr>
 nmap        <F9>            :TagbarToggle<cr>
@@ -119,9 +121,9 @@ nnoremap    <C-J>           <C-W><C-J>
 nnoremap    <C-K>           <C-W><C-K>
 nnoremap    <C-L>           <C-W><C-L>
 nnoremap    <C-H>           <C-W><C-H>
-nmap <Leader>f           :tag
-nmap <Leader>a           :Tabularize /
-vmap <Leader>a           :Tabularize /
+nmap        <Leader>f       :tag
+nmap        <Leader>a       :Tabularize /
+vmap        <Leader>a       :Tabularize /
 
 
 "autocommand
