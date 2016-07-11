@@ -22,6 +22,8 @@ Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'itchyny/landscape.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'shougo/vinarise.vim'
+Plugin 'mhinz/vim-signify'
 call vundle#end()
 
 filetype plugin on
