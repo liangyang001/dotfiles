@@ -24,6 +24,7 @@ Plugin 'itchyny/landscape.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'shougo/vinarise.vim'
 Plugin 'mhinz/vim-signify'
+Plugin 'fatih/vim-go'
 call vundle#end()
 
 filetype plugin on
@@ -119,6 +120,7 @@ noremap     <Down>          j
 noremap     <Left>          h
 noremap     <Right>         l
 nmap        <C-s>           :w<cr>
+nnoremap    <Leader>2       :NERDTreeFind<cr>
 nnoremap    <C-J>           <C-W><C-J>
 nnoremap    <C-K>           <C-W><C-K>
 nnoremap    <C-L>           <C-W><C-L>
@@ -144,3 +146,4 @@ autocmd InsertLeave * highlight  CursorLine ctermbg=DarkGrey
 "command
 ":FixWhitespace
 "use [# or #] navigate up/down for #if/#endif  #ifdef/#endif etc
+"help signify
