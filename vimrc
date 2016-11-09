@@ -25,6 +25,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'shougo/vinarise.vim'
 Plugin 'mhinz/vim-signify'
 Plugin 'fatih/vim-go'
+Plugin 'yggdroot/indentline'
 call vundle#end()
 
 filetype plugin on
@@ -94,6 +95,11 @@ let g:airline_right_alt_sep = '❮'
 let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.branch = '⎇'
 let g:airline_theme="badwolf"
+
+
+let g:indentLine_setColors = 1
+let g:indentLine_color_term = 239
+"let g:indentLine_char = '|'
 
 
 "function AddTafCodePath()
