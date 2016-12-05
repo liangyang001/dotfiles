@@ -84,7 +84,7 @@ let g:rbpt_colorpairs = [
 
 let g:molokai_original = 1
 let g:rehash256 = 1
-"let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#enabled=1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
@@ -92,6 +92,7 @@ let g:airline_left_sep = '▶'
 let g:airline_left_alt_sep = '❯'
 let g:airline_right_sep = '◀'
 let g:airline_right_alt_sep = '❮'
+let g:airline_section_c = '%F'
 let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.branch = '⎇'
 let g:airline_theme="badwolf"
@@ -112,7 +113,7 @@ nmap        /               <Plug>(easymotion-sn)
 nnoremap    <Leader>l       :silent <C-u>nohls<cr><C-l>
 nnoremap    <Leader>*       :silent execute  "vimgrep /\\<".expand("<cword>")."\\>/gj ".expand("%")<cr>
 nnoremap    <Leader><Leader>* :silent execute  "vimgrep /\\<".expand("<cword>")."\\>/gj *.cpp *.c *.h"<cr>
-map         <F2>            :NERDTreeToggle<cr>
+"map         <F2>            :NERDTreeToggle<cr>
 nnoremap    <F3>            :cp<Cr>
 nnoremap    <F4>            :cn<cr>
 "nnoremap    <F5>            :silent execute  "vimgrep /\\<".expand("<cword>")."\\>/gj *.cpp *.c *.h"<cr>
@@ -125,13 +126,15 @@ noremap     <Up>            k
 noremap     <Down>          j
 noremap     <Left>          h
 noremap     <Right>         l
-nmap        <C-s>           :w<cr>
-nnoremap    <Leader>2       :NERDTreeFind<cr>
+nnoremap    <Leader>f       :NERDTreeFind<cr>
+nnoremap    <Leader>n       :NERDTreeToggle<cr>
+nnoremap    <C-Left>        :tabp<cr>
+nnoremap    <C-Right>       :tabn<cr>
 nnoremap    <C-J>           <C-W><C-J>
 nnoremap    <C-K>           <C-W><C-K>
 nnoremap    <C-L>           <C-W><C-L>
 nnoremap    <C-H>           <C-W><C-H>
-nmap        <Leader>f       :tag
+nnoremap    <C-M>           %
 nmap        <Leader>a       :Tabularize /
 vmap        <Leader>a       :Tabularize /
 
@@ -153,3 +156,6 @@ autocmd InsertLeave * highlight  CursorLine ctermbg=DarkGrey
 ":FixWhitespace
 "use [# or #] navigate up/down for #if/#endif  #ifdef/#endif etc
 "help signify
+"
+"
+
