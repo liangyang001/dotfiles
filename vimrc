@@ -58,8 +58,9 @@ colorscheme desert
 "put all thses after 'set t_Co=256'
 "override underline
 "hi cursorline cterm=bold
-hi cursorline cterm=NONE ctermbg=DarkGrey
-hi Search ctermfg=Black ctermbg=LightRed cterm=NONE
+" for grep background
+"hi cursorline cterm=NONE ctermbg=DarkGrey
+"hi Search ctermfg=Black ctermbg=LightRed cterm=NONE
 
 let mapleader=','
 let g:alternateExtensions_CPP = "h,H,inc,HPP,hpp"
@@ -148,8 +149,9 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 "au Syntax * RainbowParenthesesLoadBraces
-autocmd InsertEnter * highlight  CursorLine ctermbg=NONE
-autocmd InsertLeave * highlight  CursorLine ctermbg=DarkGrey
+" for grep background
+"autocmd InsertEnter * highlight  CursorLine ctermbg=NONE
+"autocmd InsertLeave * highlight  CursorLine ctermbg=DarkGrey
 
 
 "command
