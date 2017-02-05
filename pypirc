@@ -1,0 +1,7 @@
+[distutils]
+index-servers=pypi
+
+[pypi]
+repository = https://upload.pypi.org/legacy/
+username = ColdSun
+password = 7749BF0Df77e
