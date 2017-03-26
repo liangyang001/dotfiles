@@ -1,10 +1,12 @@
 [user]
-	name = Kurt
-	email = 54445013@qq.com
+    name = Kurt
+    email = 54445013@qq.com
 [color]
-	ui = true
+    ui = true
 [alias]
-	st = status
-	ci = commit
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
 [push]
-	default = matching
+    default = matching
