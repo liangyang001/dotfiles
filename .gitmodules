@@ -64,3 +64,6 @@
 [submodule "vim/bundle/indentline"]
 	path = vim/bundle/indentline
 	url = https://github.com/yggdroot/indentline.git
+[submodule "vim/bundle/matchit.zip"]
+	path = vim/bundle/matchit.zip
+	url = https://github.com/vim-scripts/matchit.zip.git

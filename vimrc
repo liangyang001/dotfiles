@@ -26,6 +26,7 @@ Plugin 'shougo/vinarise.vim'
 Plugin 'mhinz/vim-signify'
 Plugin 'fatih/vim-go'
 Plugin 'yggdroot/indentline'
+Plugin 'vim-scripts/matchit.zip'
 call vundle#end()
 
 filetype plugin on
@@ -103,7 +104,6 @@ let g:indentLine_setColors = 1
 let g:indentLine_color_term = 239
 "let g:indentLine_char = '|'
 
-
 "function AddTafCodePath()
 ""    set path+=/home/tafjce/**
 "endfunction
@@ -148,6 +148,9 @@ au bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTre
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
+
+au VimEnter * au FileType * let b:match_words='\<DB_BEGIN\>:\<DB_END\>,\<FUN_BEGIN\>:\<FUN_END\>'
+
 "au Syntax * RainbowParenthesesLoadBraces
 " for grep background
 "autocmd InsertEnter * highlight  CursorLine ctermbg=NONE
