@@ -27,6 +27,7 @@ Plugin 'mhinz/vim-signify'
 Plugin 'fatih/vim-go'
 Plugin 'yggdroot/indentline'
 Plugin 'vim-scripts/matchit.zip'
+Plugin 'KurtLiang/vim-typhoon-blade'
 call vundle#end()
 
 filetype plugin on

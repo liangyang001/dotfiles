@@ -67,3 +67,6 @@
 [submodule "vim/bundle/matchit.zip"]
 	path = vim/bundle/matchit.zip
 	url = https://github.com/vim-scripts/matchit.zip.git
+[submodule "vim/bundle/vim-typhoon-blade"]
+	path = vim/bundle/vim-typhoon-blade
+	url = https://github.com/KurtLiang/vim-typhoon-blade.git
