@@ -1,5 +1,3 @@
-
-set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -139,6 +137,7 @@ nnoremap    <C-H>           <C-W><C-H>
 nnoremap    <C-M>           %
 nmap        <Leader>a       :Tabularize /
 vmap        <Leader>a       :Tabularize /
+nnoremap    <Leader>s       :FixWhitespace<cr>
 
 
 "autocommand
