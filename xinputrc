@@ -1,0 +1,5 @@
+# im-config(8) generated on Sun, 01 Apr 2018 13:01:04 +0800
+run_im fcitx
+# im-config signature: ed7ad248570ad02e05e0aba9cf88354b  -
+
+setxkbmap -option "ctrl:nocaps"
