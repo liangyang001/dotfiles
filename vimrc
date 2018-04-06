@@ -26,6 +26,8 @@ Plugin 'fatih/vim-go'
 Plugin 'yggdroot/indentline'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'KurtLiang/vim-typhoon-blade'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdcommenter'
 call vundle#end()
 
 filetype plugin on
@@ -163,4 +165,6 @@ au VimEnter * au FileType * let b:match_words='\<DB_BEGIN\>:\<DB_END\>,\<FUN_BEG
 "help signify
 "
 "
-
+" comment   <leader>cc   with //
+" comment   <leader>cm   with /**/
+" uncomment  <leader>cu
